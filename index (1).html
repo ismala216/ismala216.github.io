@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tunç Elektrik Öner Kazan</title>
+<meta name="description" content="Bizi bir yakınınıza önerin, çarkı çevirin; bugünkü işinizde %5 ile %20 arasında indirim kazanın.">
+<meta property="og:title" content="TUNÇ ELEKTRİK · Öner Kazan 🎁">
+<meta property="og:description" content="Bizi bir yakınınıza önerin, çarkı çevirin; %5 ile %20 arasında indirim kazanın.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#070B14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: teşekkür eden, sıcak ama güven veren esnaf sayfası
+   IDEA: elektrik panosu gecesi — lacivert zemin, sarı şimşek, şans çarkı
+   PICTURE: dönen indirim çarkı ve hazır öneri mesajı
+   COLOUR/TYPE: lacivert #070B14, sarı #FFC400, mor ödül; Saira + Manrope
+   LAYOUT: telefonda tek sütun, geniş ekranda ortalanmış kart */
+:root{color-scheme:dark;--y:#FFC400;--ink:#E8EDF8;--mut:#AEB9D3;--bd:rgba(255,255,255,.08);--p:#B38BFF}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;min-height:100%}
+body{background:radial-gradient(120% 60% at 0 0,#14203D 0,rgba(20,32,61,0) 60%),radial-gradient(90% 50% at 100% 100%,#2A1E05 0,rgba(42,30,5,0) 60%),#070B14;color:var(--ink);font:16px/1.5 Manrope,system-ui,sans-serif;overflow-x:clip}
+button,a.btn{font:inherit;border:0;cursor:pointer;text-decoration:none}
+.wrap{max-width:440px;margin:0 auto;padding:22px 18px 40px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.tile{display:grid;place-items:center;flex:none;box-shadow:inset 0 2px 1px rgba(255,255,255,.5),inset 0 -6px 9px rgba(0,0,0,.25),0 10px 20px rgba(0,0,0,.35)}
+.gy{background:linear-gradient(160deg,#FFF06A,#FFC400 45%,#FF9A00)}.gp{background:linear-gradient(160deg,#C9A6FF,#7C3AED)}.gn{background:linear-gradient(160deg,#2A3558,#0B1020)}
+.brand{font:800 14px Saira,sans-serif;letter-spacing:2.5px;color:var(--y)}
+.card{position:relative;overflow:hidden;border-radius:26px;padding:22px 18px;background:linear-gradient(180deg,#17213D,#0C1222);border:1px solid rgba(255,196,0,.3);box-shadow:0 24px 50px rgba(0,0,0,.45)}
+h1{font:800 27px/1.15 Saira,sans-serif;color:#fff;margin:0;text-wrap:balance}
+p{margin:8px 0 0;color:var(--mut)}
+.center{text-align:center}
+.kick{font:800 12px Saira,sans-serif;letter-spacing:2px;color:var(--y);margin:18px 0 8px}
+.bubble{background:#DCF8C6;color:#111B21;border-radius:16px 16px 4px 16px;padding:12px 14px;font-size:14.5px;line-height:1.5;white-space:pre-line;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.btn{display:flex;width:100%;height:56px;margin-top:16px;border-radius:18px;align-items:center;justify-content:center;gap:9px;font:800 17px Saira,sans-serif;color:#1A1203;background:linear-gradient(#FFD84D,#FFB300);box-shadow:inset 0 2px 0 rgba(255,255,255,.6),inset 0 -4px 0 rgba(160,80,0,.35),0 12px 24px rgba(255,170,0,.3);transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.wa{color:#fff;background:linear-gradient(#4BE07E,#1DAA55);box-shadow:inset 0 2px 0 rgba(255,255,255,.4),0 12px 24px rgba(37,211,102,.3)}
+.btn.ghost{height:48px;font-size:15px;color:#25D366;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.3);box-shadow:none}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.pulse{animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:inset 0 2px 0 rgba(255,255,255,.6),0 0 0 8px rgba(255,196,0,.15),0 12px 30px rgba(255,170,0,.5)}}
+.wheelbox{position:relative;width:min(260px,72vw);aspect-ratio:1;margin:8px auto 18px}
+.wheel{position:relative;width:100%;height:100%;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 4px var(--y),0 18px 40px rgba(0,0,0,.5);transition:transform 4.2s cubic-bezier(.12,.8,.1,1);background:conic-gradient(#FFB300 0 60deg,#2563EB 60deg 120deg,#12A150 120deg 180deg,#FF7A00 180deg 240deg,#7C3AED 240deg 300deg,#E5243B 300deg 360deg)}
+.wheel span{position:absolute;inset:0}
+.wheel b{position:absolute;transform:translate(-50%,-50%);font:800 22px Saira,sans-serif;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.45);white-space:nowrap}
+.pin{position:absolute;left:50%;top:-16px;margin-left:-15px;width:30px;height:36px;z-index:2;clip-path:polygon(50% 100%,0 0,100% 0);background:#fff;filter:drop-shadow(0 3px 4px rgba(0,0,0,.5))}
+.hub{position:absolute;left:50%;top:50%;width:60px;height:60px;margin:-30px;border-radius:50%;z-index:2;border:4px solid #fff}
+.code{font:800 30px Saira,sans-serif;letter-spacing:3px;color:var(--y);text-align:center;padding:14px;margin-top:14px;border-radius:18px;border:2px dashed rgba(255,196,0,.6);background:rgba(255,196,0,.08);animation:pop .5s cubic-bezier(.34,1.4,.64,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.8)}}
+.cap{font-size:13px;color:#8A96B3;text-align:center;margin-top:10px}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-16px;width:8px;height:14px;border-radius:2px;animation:conf 2.6s ease-in forwards}
+@keyframes conf{to{transform:translateY(760px) rotate(720deg);opacity:0}}
+.fade{animation:fade .45s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px)}}
+.foot{margin-top:18px;text-align:center;font-size:13px;color:#8A96B3}
+.foot a{color:var(--y);font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <span class="tile gy" style="width:52px;height:52px;border-radius:16px"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><path d="M37 6 15 36H30L26 58 50 26H35Z" transform="translate(2 3)" fill="#7A4300" fill-opacity=".5"/><path d="M37 6 15 36H30L26 58 50 26H35Z" fill="#141B30"/></svg></span>
+    <div><div class="brand">TUNÇ ELEKTRİK</div><div style="font-size:13px;color:var(--mut)">Öner Kazan</div></div>
+  </div>
+  <section class="card" id="app" aria-live="polite"></section>
+  <div class="foot" id="foot"></div>
+</main>
+<script>
+{
+const BUSINESS = 'TUNÇ ELEKTRİK';
+const KEY = 'tunc-oner-2026';
+const SEG = [5, 7, 10, 12, 15, 20], WEIGHT = [30, 25, 20, 12, 8, 5];
+const app = document.getElementById('app'), foot = document.getElementById('foot');
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const chk = (no, pct) => { let h = 7; for (const c of `${no}|${pct}|${KEY}`) h = (h * 131 + c.charCodeAt(0)) % 1679616; const L = 'ABCDEFGHJKLMNPRSTUVYZ'; return L[h % 21] + L[Math.floor(h / 21) % 21]; };
+const makeCode = (no, pct) => `TE${no}-${pct}${chk(no, pct)}`;
+const pickPct = () => { let r = Math.random() * 100; for (let i = 0; i < SEG.length; i++) if ((r -= WEIGHT[i]) < 0) return SEG[i]; return 5; };
+const nicePhone = d => { if (!d) return ''; let n = d.startsWith('90') ? '0' + d.slice(2) : d; return n.length === 11 ? `${n.slice(0, 4)} ${n.slice(4, 7)} ${n.slice(7, 9)} ${n.slice(9)}` : n; };
+const wa = (phone, text) => `https://wa.me/${phone || ''}?text=${encodeURIComponent(text)}`;
+const store = {get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }};
+
+let no = null, name = '', phone = '', stage = 0, result = null;
+function readHash() {
+  const m = (location.hash || '').slice(1).toLowerCase().match(/^r(\d+)(?:-([a-z]+))?(?:-(\d{10,13}))?$/);
+  if (!m) { no = null; return; }
+  no = +m[1]; name = m[2] ? m[2][0].toUpperCase() + m[2].slice(1) : ''; phone = m[3] || '';
+  result = store.get('tunc_oner_' + no); stage = result ? 3 : 0;
+}
+const recMsg = () => `Merhaba! 👋\n\nGeçenlerde elektrik işim için *${BUSINESS}* ile çalıştım. İşlerini temiz, hızlı ve özenle yaptılar, çok memnun kaldım. Gönül rahatlığıyla tavsiye ederim.\n\nElektrikle ilgili bir ihtiyacın olursa (arıza, tesisat, pano, aydınlatma) mutlaka ara:\n⚡ ${BUSINESS}${phone ? '\n📞 ' + nicePhone(phone) : ''}\n\nArarken ${name || 'benim'} tarafından önerildiğini söylemen yeterli. 🙂`;
+const chatIco = '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8 19z"/></svg>';
+const giftIco = s => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1.5"/><path d="M5 13v8h14v-8M12 8v13"/><path d="M12 8c-1.5-3-6-3.5-6-1s4 1 6 1zm0 0c1.5-3 6-3.5 6-1s-4 1-6 1z"/></svg>`;
+const wheelHTML = rot => `<div class="wheelbox"><div class="pin"></div><div class="wheel" id="wheel" style="transform:rotate(${rot}deg);${stage === 3 ? 'transition:none' : ''}">${SEG.map((p, i) => { const a = (i * 60 + 30) * Math.PI / 180; return `<span><b style="left:calc(50% + ${(Math.sin(a) * 33).toFixed(1)}%);top:calc(50% + ${(-Math.cos(a) * 33).toFixed(1)}%)">%${p}</b></span>`; }).join('')}</div><span class="hub tile gn"><svg viewBox="0 0 64 64" width="30" height="30" aria-hidden="true"><path d="M37 6 15 36H30L26 58 50 26H35Z" fill="#FFC400"/></svg></span></div>`;
+const rotFor = pct => 360 * 6 - (SEG.indexOf(pct) * 60 + 30);
+
+function render(fresh) {
+  if (no == null) {
+    app.innerHTML = `<div class="center fade"><span class="tile gp" style="width:64px;height:64px;border-radius:20px;margin:0 auto;color:#fff">${giftIco(32)}</span><h1 style="margin-top:14px">Öner Kazan</h1><p>Bu sayfayı ${BUSINESS}'in size WhatsApp'tan gönderdiği kişisel bağlantıdan açın. Bağlantıda indirim numaranız yer alır.</p></div>`;
+    foot.textContent = ''; return;
+  }
+  if (stage === 0) app.innerHTML = `<div class="fade"><div class="center"><h1>Teşekkürler${name ? ', ' + esc(name) : ''}!</h1><p>Memnun kaldıysanız bizi bir yakınınıza önerin; çarkı çevirin, <b style="color:var(--y)">bugünkü işinizde %5 ile %20 arasında</b> indirim kazanın.</p></div>
+    <div class="kick">GÖNDERİLECEK MESAJ</div><div class="bubble">${esc(recMsg()).replace(/\*(.+?)\*/g, '<b>$1</b>')}</div>
+    <a class="btn wa" id="share" href="${wa('', recMsg())}" target="_blank" rel="noopener">${chatIco}WhatsApp'tan öner</a>
+    <div class="cap">Kime göndereceğinizi WhatsApp'ta seçersiniz; mesajı dilediğiniz gibi düzenleyebilirsiniz.</div></div>`;
+  else if (stage === 1) app.innerHTML = `<div class="center fade"><span class="tile gp" style="width:66px;height:66px;border-radius:21px;margin:0 auto;color:#fff">${giftIco(34)}</span><h1 style="margin-top:14px">Önerinizi gönderdiniz mi?</h1><p>Gönderdiyseniz çarkı çevirin, indiriminiz hemen açılsın.</p>
+    <button class="btn pulse" id="spin">${giftIco(21)}Evet, gönderdim · Çarkı çevir</button>
+    <a class="btn ghost" href="${wa('', recMsg())}" target="_blank" rel="noopener">${chatIco}Mesajı tekrar aç</a></div>`;
+  else {
+    const r = result;
+    app.innerHTML = `${wheelHTML(stage === 3 ? rotFor(r.pct) : 0)}${stage === 3 ? `<div class="center fade"><h1>Tebrikler! %${r.pct} indirim</h1><p>Kodunuzu ${BUSINESS}'e gönderin; indiriminiz bugünkü fişinize uygulansın.</p></div><div class="code">${r.code}</div>
+      <a class="btn wa" href="${wa(phone, `Merhaba ${BUSINESS}, Öner Kazan indirim kodum: ${r.code} (%${r.pct}).${name ? ' ' + name : ''}`)}" target="_blank" rel="noopener">${chatIco}Kodu ${BUSINESS}'e gönder</a>
+      <div class="cap">Kod 30 gün geçerlidir ve bir kez kullanılabilir.</div>` : '<div class="cap">Çark dönüyor…</div>'}
+      ${fresh ? `<div class="confetti">${Array.from({length:36}, (_, i) => `<i style="left:${(i * 37) % 100}%;background:${['#FFC400', '#4ADE80', '#6EA8FF', '#B38BFF', '#FF6B7A'][i % 5]};animation-delay:${(i % 9) * .09}s"></i>`).join('')}</div>` : ''}`;
+  }
+  foot.innerHTML = phone ? `Sorunuz mu var? <a href="${wa(phone, 'Merhaba ' + BUSINESS + ',')}" target="_blank" rel="noopener">${BUSINESS} · ${nicePhone(phone)}</a>` : '';
+  const sh = document.getElementById('share'); if (sh) sh.addEventListener('click', () => setTimeout(() => { stage = 1; render(); }, 400));
+  const sp = document.getElementById('spin'); if (sp) sp.addEventListener('click', spin);
+}
+function spin() {
+  const saved = store.get('tunc_oner_' + no);
+  if (saved) { result = saved; stage = 3; render(); return; }
+  const pct = pickPct(); result = {pct, code:makeCode(no, pct)};
+  stage = 2; render();
+  requestAnimationFrame(() => requestAnimationFrame(() => { const w = document.getElementById('wheel'); if (w) w.style.transform = `rotate(${rotFor(pct)}deg)`; }));
+  setTimeout(() => { store.set('tunc_oner_' + no, result); stage = 3; render(true); }, 4500);
+}
+readHash(); render();
+window.addEventListener('hashchange', () => { readHash(); render(); });
+}
+</script>
+</body>
+</html>
